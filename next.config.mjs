@@ -6,6 +6,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export',
+  basePath: process.env.GITHUB_ACTIONS ? '/eliana-bicudo' : '',
+  assetPrefix: process.env.GITHUB_ACTIONS ? '/eliana-bicudo/' : undefined,
+  trailingSlash: true,
 }
 
 export default nextConfig

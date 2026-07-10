@@ -1,0 +1,275 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-light-gold: var(--light-gold);
+  --color-peach: var(--peach);
+  --color-sage: var(--sage);
+  --color-beige: var(--beige);
+  --color-rose-soft: var(--rose-soft);
+  --color-deep-shadow: var(--deep-shadow);
+
+  --font-serif: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-montserrat), -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  /* Marfim quente */
+  --background: #fdf8f5;
+  /* Ameixa quente profunda */
+  --foreground: #43272f;
+  --card: #ffffff;
+  --card-foreground: #43272f;
+  --popover: #ffffff;
+  --popover-foreground: #43272f;
+  /* Rosa-malva refinado */
+  --primary: #9b5c6f;
+  --primary-foreground: #fdf5f2;
+  /* Blush claro */
+  --secondary: #f8ebe8;
+  --secondary-foreground: #43272f;
+  --muted: #f6ebe7;
+  /* Malva acinzentado */
+  --muted-foreground: #8a6b74;
+  /* Rosa suave */
+  --accent: #eac9d0;
+  --accent-foreground: #43272f;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #f0dcda;
+  --input: #f0dcda;
+  /* Dourado champagne */
+  --ring: #c19a5b;
+
+  /* Cores personalizadas da marca */
+  --gold: #c19a5b;
+  --gold-foreground: #43272f;
+  --light-gold: #e8d5aa;
+  --peach: #eac9d0;
+  /* Rosa empoeirado (antigo sage) */
+  --sage: #c58a9c;
+  --beige: #f8ede9;
+  --rose-soft: #f8ebe8;
+  --deep-shadow: #5c2f43;
+
+  --chart-1: #9b5c6f;
+  --chart-2: #c19a5b;
+  --chart-3: #c58a9c;
+  --chart-4: #eac9d0;
+  --chart-5: #5c2f43;
+  --radius: 0.9rem;
+  --sidebar: #fdf8f5;
+  --sidebar-foreground: #43272f;
+  --sidebar-primary: #9b5c6f;
+  --sidebar-primary-foreground: #fdf5f2;
+  --sidebar-accent: #eac9d0;
+  --sidebar-accent-foreground: #43272f;
+  --sidebar-border: #f0dcda;
+  --sidebar-ring: #c19a5b;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* ===== Gradientes de fundo em camadas ===== */
+
+  /* Fundo claro e arejado (hero e seções claras) */
+  .gradient-soft {
+    background:
+      radial-gradient(
+        120% 90% at 0% 0%,
+        rgba(234, 201, 208, 0.5) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        110% 90% at 100% 5%,
+        rgba(232, 213, 170, 0.4) 0%,
+        transparent 50%
+      ),
+      linear-gradient(180deg, #fdf8f5 0%, #faf0ee 100%);
+  }
+
+  /* Fundo blush suave para alternar seções */
+  .gradient-blush {
+    background:
+      radial-gradient(
+        100% 80% at 100% 0%,
+        rgba(234, 201, 208, 0.45) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        90% 90% at 0% 100%,
+        rgba(232, 213, 170, 0.3) 0%,
+        transparent 55%
+      ),
+      linear-gradient(160deg, #faf0ee 0%, #f8ede9 100%);
+  }
+
+  /* Fundo profundo e sofisticado (seções escuras) */
+  .gradient-deep {
+    background:
+      radial-gradient(
+        90% 110% at 12% 8%,
+        rgba(193, 154, 91, 0.22) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        80% 100% at 100% 100%,
+        rgba(234, 201, 208, 0.16) 0%,
+        transparent 50%
+      ),
+      linear-gradient(135deg, #4a2432 0%, #6d3a50 50%, #8a4e66 100%);
+  }
+
+  /* ===== Overlays translúcidos sobre imagens ===== */
+
+  /* Tinta rosa/dourada translúcida sobre a foto */
+  .img-tint::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(155, 92, 111, 0.32) 0%,
+      rgba(193, 154, 91, 0.14) 55%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  /* Fade suave para imagens que se fundem ao fundo */
+  .img-fade::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      var(--background) 0%,
+      transparent 35%
+    );
+    pointer-events: none;
+  }
+
+  /* Textura sutil de papel/linho */
+  .texture-linen {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  /* Divisória decorativa dourada */
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--gold) 45%,
+      var(--gold) 55%,
+      transparent
+    );
+  }
+
+  /* Glow dourado/rosado no hover dos cards */
+  .card-glow:hover {
+    box-shadow:
+      0 18px 40px -18px rgba(193, 154, 91, 0.4),
+      0 6px 16px -8px rgba(155, 92, 111, 0.2);
+  }
+
+  /* Reveal ao scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.8s ease-out,
+      transform 0.8s ease-out;
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes soft-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(193, 154, 91, 0.45);
+    }
+    50% {
+      box-shadow: 0 0 0 12px rgba(193, 154, 91, 0);
+    }
+  }
+  .animate-soft-pulse {
+    animation: soft-pulse 2.4s ease-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .animate-soft-pulse {
+      animation: none;
+    }
+  }
+}

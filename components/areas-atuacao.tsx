@@ -19,9 +19,9 @@ const areas = [
   },
   {
     icon: Stethoscope,
-    title: "Aposentadoria por Incapacidade Permanente",
+    title: "Auxílio por Incapacidade Permanente",
     description:
-      "Atuação na concessão da aposentadoria por incapacidade permanente (antiga aposentadoria por invalidez), na esfera administrativa e judicial, para quem está permanentemente incapacitado para o trabalho.",
+      "Atuação na concessão de auxílio por incapacidade permanente (antiga Aposentadoria por Invalidez), na esfera administrativa e judicial, para quem está permanentemente incapacitado para o trabalho.",
   },
   {
     icon: HeartPulse,

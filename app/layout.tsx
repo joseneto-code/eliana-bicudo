@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Montserrat } from 'next/font/google'
+import { withBasePath } from '@/lib/site'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -42,9 +43,9 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
   },
   icons: {
-    icon: '/icon.png',
-    shortcut: '/icon.png',
-    apple: '/apple-icon.png',
+    icon: withBasePath('/icon.png'),
+    shortcut: withBasePath('/icon.png'),
+    apple: withBasePath('/apple-icon.png'),
   },
 }
 

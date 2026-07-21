@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Menu, X, MessageCircle } from "lucide-react"
-import { whatsappLink } from "@/lib/site"
+import { whatsappLink, withBasePath } from "@/lib/site"
 
 const navLinks = [
   { label: "Áreas de Atuação", href: "#areas" },
@@ -33,7 +33,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
         <a href="#inicio" className="flex items-center gap-3">
           <Image
-            src="/logo-eliana-bicudo.png"
+            src={withBasePath("/logo-eliana-bicudo.png")}
             alt="Logo Eliana Bicudo Advocacia"
             width={52}
             height={52}

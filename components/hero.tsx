@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { MessageCircle, MapPin, ShieldCheck } from "lucide-react"
-import { whatsappLink } from "@/lib/site"
+import { whatsappLink, withBasePath } from "@/lib/site"
 import { Ornament } from "@/components/ornament"
 
 export function Hero() {
@@ -59,7 +59,7 @@ export function Hero() {
           <div className="rounded-[2.4rem] border border-gold/40 p-2 backdrop-blur-sm">
             <div className="img-tint relative overflow-hidden rounded-[2rem] border-2 border-gold/50 shadow-2xl shadow-primary/20">
               <Image
-                src="/eliana-corpo-inteiro.jpg"
+                src={withBasePath("/eliana-corpo-inteiro.jpg")}
                 alt="Dra. Eliana Bicudo, advogada previdenciária em Sumaré"
                 width={700}
                 height={1000}

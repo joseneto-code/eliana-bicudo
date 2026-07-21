@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { MapPin, MessageCircle, Camera } from "lucide-react"
-import { whatsappLink, INSTAGRAM_URL, siteConfig } from "@/lib/site"
+import { whatsappLink, INSTAGRAM_URL, siteConfig, withBasePath } from "@/lib/site"
 
 export function SiteFooter() {
   return (
@@ -10,7 +10,7 @@ export function SiteFooter() {
         <div>
           <div className="flex items-center gap-3">
             <Image
-              src="/logo-eliana-bicudo.png"
+              src={withBasePath("/logo-eliana-bicudo.png")}
               alt="Logo Eliana Bicudo Advocacia"
               width={48}
               height={48}

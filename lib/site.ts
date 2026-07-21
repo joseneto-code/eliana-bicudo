@@ -1,4 +1,14 @@
 // Configurações centrais do site.
+
+// Precisa espelhar o basePath de next.config.mjs: no GitHub Pages o site
+// fica em /eliana-bicudo, então toda referência a arquivos de /public
+// (imagens, ícones) precisa desse prefixo para não quebrar em produção.
+export const basePath = process.env.GITHUB_ACTIONS ? "/eliana-bicudo" : ""
+
+export function withBasePath(path: string) {
+  return `${basePath}${path}`
+}
+
 // Número no formato internacional, apenas dígitos.
 export const WHATSAPP_NUMBER = "5519995222579"
 

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { MessageCircle } from "lucide-react"
-import { whatsappLink } from "@/lib/site"
+import { whatsappLink, withBasePath } from "@/lib/site"
 import { Reveal } from "@/components/reveal"
 
 export function CtaFinal() {
@@ -37,7 +37,7 @@ export function CtaFinal() {
             <div className="rounded-2xl border border-gold/40 p-1.5">
               <div className="img-tint relative overflow-hidden rounded-xl border border-gold/60 shadow-sm">
                 <Image
-                  src="/eliana-retrato.jpg"
+                  src={withBasePath("/eliana-retrato.jpg")}
                   alt="Dra. Eliana Bicudo"
                   width={400}
                   height={520}

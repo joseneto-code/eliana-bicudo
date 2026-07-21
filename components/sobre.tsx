@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Check, Award, Calendar, MapPin } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { Ornament } from "@/components/ornament"
+import { withBasePath } from "@/lib/site"
 
 const destaques = [
   "Especialista em benefícios negados e revisões do INSS",
@@ -28,7 +29,7 @@ export function Sobre() {
           <div className="rounded-[2.4rem] border border-gold/40 p-2 backdrop-blur-sm">
             <div className="img-tint relative overflow-hidden rounded-[2rem] border-2 border-gold/50 bg-card shadow-xl shadow-primary/15">
               <Image
-                src="/eliana-sentada.jpg"
+                src={withBasePath("/eliana-sentada.jpg")}
                 alt="Dra. Eliana Bicudo com livros de Direito Previdenciário"
                 width={700}
                 height={1000}

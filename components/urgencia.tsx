@@ -70,7 +70,7 @@ export function Urgencia() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-gold-foreground shadow-lg transition-all duration-300 hover:scale-[1.03] hover:bg-peach"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-gold-foreground shadow-lg transition-all duration-300 hover:scale-[1.03] hover:bg-gold/90"
           >
             <MessageCircle className="h-5 w-5" />
             Falar com a Advogada Agora

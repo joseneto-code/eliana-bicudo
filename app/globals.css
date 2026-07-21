@@ -60,56 +60,57 @@
 
 :root {
   color-scheme: light;
-  /* Marfim quente */
-  --background: #fdf8f5;
-  /* Ameixa quente profunda */
-  --foreground: #43272f;
+  /* Off-white */
+  --background: #faf7f1;
+  /* Marrom quente profundo */
+  --foreground: #3a332b;
   --card: #ffffff;
-  --card-foreground: #43272f;
+  --card-foreground: #3a332b;
   --popover: #ffffff;
-  --popover-foreground: #43272f;
-  /* Rosa-malva refinado */
-  --primary: #9b5c6f;
-  --primary-foreground: #fdf5f2;
-  /* Blush claro */
-  --secondary: #f8ebe8;
-  --secondary-foreground: #43272f;
-  --muted: #f6ebe7;
-  /* Malva acinzentado */
-  --muted-foreground: #8a6b74;
-  /* Rosa suave */
-  --accent: #eac9d0;
-  --accent-foreground: #43272f;
+  --popover-foreground: #3a332b;
+  /* Dourado profundo (CTAs) */
+  --primary: #8a6530;
+  --primary-foreground: #fbf8f2;
+  /* Algodão egípcio claro */
+  --secondary: #efe6d3;
+  --secondary-foreground: #3a332b;
+  --muted: #f3ece0;
+  /* Algodão egípcio acinzentado */
+  --muted-foreground: #71654f;
+  /* Algodão egípcio */
+  --accent: #e6d9be;
+  --accent-foreground: #3a332b;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #f0dcda;
-  --input: #f0dcda;
+  --border: #e6dcc8;
+  --input: #e6dcc8;
   /* Dourado champagne */
   --ring: #c19a5b;
 
   /* Cores personalizadas da marca */
   --gold: #c19a5b;
-  --gold-foreground: #43272f;
+  --gold-foreground: #3a332b;
   --light-gold: #e8d5aa;
-  --peach: #eac9d0;
-  /* Rosa empoeirado (antigo sage) */
-  --sage: #c58a9c;
-  --beige: #f8ede9;
-  --rose-soft: #f8ebe8;
-  --deep-shadow: #5c2f43;
+  /* Algodão egípcio (tint suave) */
+  --peach: #e6d9be;
+  /* Dourado profundo (mesma família do primary) */
+  --sage: #8a6530;
+  --beige: #f3ece0;
+  --rose-soft: #efe6d3;
+  --deep-shadow: #2e2820;
 
-  --chart-1: #9b5c6f;
+  --chart-1: #8a6530;
   --chart-2: #c19a5b;
-  --chart-3: #c58a9c;
-  --chart-4: #eac9d0;
-  --chart-5: #5c2f43;
+  --chart-3: #e8d5aa;
+  --chart-4: #e6d9be;
+  --chart-5: #3a332b;
   --radius: 0.9rem;
-  --sidebar: #fdf8f5;
-  --sidebar-foreground: #43272f;
-  --sidebar-primary: #9b5c6f;
-  --sidebar-primary-foreground: #fdf5f2;
-  --sidebar-accent: #eac9d0;
-  --sidebar-accent-foreground: #43272f;
-  --sidebar-border: #f0dcda;
+  --sidebar: #faf7f1;
+  --sidebar-foreground: #3a332b;
+  --sidebar-primary: #8a6530;
+  --sidebar-primary-foreground: #fbf8f2;
+  --sidebar-accent: #e6d9be;
+  --sidebar-accent-foreground: #3a332b;
+  --sidebar-border: #e6dcc8;
   --sidebar-ring: #c19a5b;
 }
 
@@ -135,7 +136,7 @@ html {
     background:
       radial-gradient(
         120% 90% at 0% 0%,
-        rgba(234, 201, 208, 0.5) 0%,
+        rgba(230, 217, 190, 0.55) 0%,
         transparent 55%
       ),
       radial-gradient(
@@ -143,15 +144,15 @@ html {
         rgba(232, 213, 170, 0.4) 0%,
         transparent 50%
       ),
-      linear-gradient(180deg, #fdf8f5 0%, #faf0ee 100%);
+      linear-gradient(180deg, #faf7f1 0%, #f3ead9 100%);
   }
 
-  /* Fundo blush suave para alternar seções */
+  /* Fundo em algodão egípcio suave para alternar seções */
   .gradient-blush {
     background:
       radial-gradient(
         100% 80% at 100% 0%,
-        rgba(234, 201, 208, 0.45) 0%,
+        rgba(230, 217, 190, 0.5) 0%,
         transparent 55%
       ),
       radial-gradient(
@@ -159,7 +160,7 @@ html {
         rgba(232, 213, 170, 0.3) 0%,
         transparent 55%
       ),
-      linear-gradient(160deg, #faf0ee 0%, #f8ede9 100%);
+      linear-gradient(160deg, #f3ead9 0%, #efe4d0 100%);
   }
 
   /* Fundo profundo e sofisticado (seções escuras) */
@@ -172,22 +173,22 @@ html {
       ),
       radial-gradient(
         80% 100% at 100% 100%,
-        rgba(234, 201, 208, 0.16) 0%,
+        rgba(230, 217, 190, 0.18) 0%,
         transparent 50%
       ),
-      linear-gradient(135deg, #4a2432 0%, #6d3a50 50%, #8a4e66 100%);
+      linear-gradient(135deg, #2e2820 0%, #4a3b24 50%, #6b5530 100%);
   }
 
   /* ===== Overlays translúcidos sobre imagens ===== */
 
-  /* Tinta rosa/dourada translúcida sobre a foto */
+  /* Tinta marrom/dourada translúcida sobre a foto */
   .img-tint::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(
       160deg,
-      rgba(155, 92, 111, 0.32) 0%,
+      rgba(46, 40, 32, 0.3) 0%,
       rgba(193, 154, 91, 0.14) 55%,
       rgba(255, 255, 255, 0) 100%
     );
@@ -225,11 +226,11 @@ html {
     );
   }
 
-  /* Glow dourado/rosado no hover dos cards */
+  /* Glow dourado no hover dos cards */
   .card-glow:hover {
     box-shadow:
       0 18px 40px -18px rgba(193, 154, 91, 0.4),
-      0 6px 16px -8px rgba(155, 92, 111, 0.2);
+      0 6px 16px -8px rgba(58, 51, 43, 0.12);
   }
 
   /* Reveal ao scroll */
